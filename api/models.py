@@ -4,10 +4,12 @@ from django.db import models
 
 #models created
 class Book(models.Model):
-    title = models.CharField(max_length=100, blank=True)
-    author = models.CharField(max_length=100, blank=True)
-    isbn = models.CharField(max_length=100, blank=True)
-    publisher = models.CharField(max_length=100, blank=True)
+   book_title = models.CharField(max_length=200, null=False, blank=False)
+   book_category = models.CharField(max_length=100,null=False, blank=False)
+   book_price = models.CharField(max_length=200, null=False, blank=False)#models.DecimalField(max_digits=4,decimal_places=2)
+   book_description = models.TextField()
+   stars = models.IntegerField()
 
-    def __str__(self):
-        return self.title
+
+   def __str__(self):
+        return self.book_title

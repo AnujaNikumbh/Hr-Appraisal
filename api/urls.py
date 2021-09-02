@@ -10,9 +10,9 @@ from . import views
 urlpatterns = [
     #path('', include(router.urls)),
     #path('',views.apiOverview, name='apiOverview'),
-    path('book-list/', views.ShowAll, name='book-list'),
-    path('book-detail/<int:pk>/', views.ViewBook, name='book-detail'),
-    path('book-create/', views.CreateBook, name='book-create'),
+    path('book-list/', views.showAll, name='book-list'),  #changed function initial to lower case
+    path('book-detail/<int:pk>/', views.viewBook, name='book-detail'),#changed function initial to lower case
+    path('book-create/', views.createBook, name='book-create'),#changed function initial to lower case
     path('book-update/<int:pk>/', views.updateBook, name='book-update'),
     path('book-delete/<int:pk>/', views.deleteBook, name='book-delete'),
     

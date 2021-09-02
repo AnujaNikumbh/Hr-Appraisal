@@ -23,8 +23,7 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include('api.urls')),
-   # path('lib/books', BookList.as_view()),
-    #path('lib/books/<int:pk>', BookDetail.as_view()),
+
  
 
 ]

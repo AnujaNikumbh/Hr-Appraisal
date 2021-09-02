@@ -23,21 +23,21 @@ def apiOverview(request):
     return Response(api_urls)'''
     
 @api_view(['GET'])
-def ShowAll(request):
+def showAll(request):  #changed function initial to lower case
     books = Book.objects.all()
     serializer = BookSerializer(books, many=True)
     return Response(serializer.data)
 
 
 @api_view(['GET'])
-def ViewBook(request,pk):
+def viewBook(request,pk):  #changed function initial to lower case
     book = Book.objects.get(id=pk)
     serializer = BookSerializer(book, many=False)
     return Response(serializer.data)
 
     
 @api_view(['POST'])
-def CreateBook(request):
+def createBook(request): #changed function initial to lower case
     serializer = BookSerializer(data=request.data)
     if serializer.is_valid():
         serializer.save()
